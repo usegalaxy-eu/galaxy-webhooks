@@ -15,7 +15,7 @@ pages = [
         # 'weight': 0.0,
     # },
     {
-        'src': 'https://stats.galaxyproject.eu/dashboard-solo/db/galaxy?refresh=1m&orgId=1&from=now-3h&to=now&panelId=38',
+        'src': 'https://stats.galaxyproject.eu/d/000000004/galaxy?orgId=1&refresh=1m&viewPanel=38&from=now-3h&to=now',
         'height': 1000,
         'title': 'Galaxy Queue (past 3 hours)',
         'weight': 0.5,
