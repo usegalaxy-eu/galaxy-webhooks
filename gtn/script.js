@@ -9,14 +9,14 @@ function showOverlay() {
     document.getElementById("gtn-container").style.visibility = "visible";
 }
 
-function getIframeUrl(){
+function getIframeUrl() {
     var loc;
     try {
         loc = document.getElementById("gtn-embed").contentWindow.location.pathname;
     } catch (e) {
         loc = null;
     }
-    return loc
+    return loc;
 }
 
 function getIframeScroll() {
@@ -26,20 +26,19 @@ function getIframeScroll() {
     } catch (e) {
         loc = 0;
     }
-    return loc
+    return loc;
 }
 
-function restoreLocation() {
-}
+function restoreLocation() {}
 
 function persistLocation() {
     // Don't save every scroll event.
     var time = new Date().getTime();
-    if ( time - lastUpdate < 1000 ) {
+    if (time - lastUpdate < 1000) {
         return;
     }
     lastUpdate = time;
-    window.localStorage.setItem('gtn-in-galaxy', `${getIframeScroll()} ${getIframeUrl()}`);
+    window.localStorage.setItem("gtn-in-galaxy", `${getIframeScroll()} ${getIframeUrl()}`);
 }
 
 function addIframe() {
@@ -54,7 +53,7 @@ function addIframe() {
     fetch("/training-material/")
         .then((response) => {
             if (!response.ok) {
-                url = "https://training.galaxyproject.org/training-material/";
+                url = "https://training.galaxyproject.org/training-material/?utm_source=webhook&utm_medium=noproxy&utm_campaign=gxy";
                 message = `
                         <span>
                             <a href="https://docs.galaxyproject.org/en/master/admin/special_topics/gtn.html">Click to run</a> unavailable.
@@ -62,12 +61,16 @@ function addIframe() {
             } else {
                 safe = true;
 
-                var storedLocation = window.localStorage.getItem('gtn-in-galaxy');
-                if(storedLocation !== null && storedLocation.split(' ')[1] !== undefined && storedLocation.split(' ')[1].startsWith('/training-material/')) {
-                    onloadscroll = storedLocation.split(' ')[0];
-                    url = storedLocation.split(' ')[1];
+                var storedLocation = window.localStorage.getItem("gtn-in-galaxy");
+                if (
+                    storedLocation !== null &&
+                    storedLocation.split(" ")[1] !== undefined &&
+                    storedLocation.split(" ")[1].startsWith("/training-material/")
+                ) {
+                    onloadscroll = storedLocation.split(" ")[0];
+                    url = storedLocation.split(" ")[1];
                 } else {
-                    url = "/training-material/";
+                    url = "/training-material/?utm_source=webhook&utm_medium=proxy&utm_campaign=gxy";
                 }
                 message = "";
             }
@@ -93,9 +96,9 @@ function addIframe() {
             });
 
             // Only setup the listener if it won't crash things.
-            if(safe) {
+            if (safe) {
                 // Listen to the scroll position
-                document.getElementById("gtn-embed").contentWindow.addEventListener('scroll', () => {
+                document.getElementById("gtn-embed").contentWindow.addEventListener("scroll", () => {
                     persistLocation();
                 });
             }
@@ -103,12 +106,12 @@ function addIframe() {
             // Depends on the iframe being present
             document.getElementById("gtn-embed").addEventListener("load", () => {
                 // Save our current location when possible
-                if(onloadscroll !== undefined){
-                    document.getElementById('gtn-embed').contentWindow.scrollTo(0, parseInt(onloadscroll));
+                if (onloadscroll !== undefined) {
+                    document.getElementById("gtn-embed").contentWindow.scrollTo(0, parseInt(onloadscroll));
                     onloadscroll = undefined;
                 }
 
-                if(safe) {
+                if (safe) {
                     persistLocation();
                 }
                 var gtn_tools = $("#gtn-embed").contents().find("span[data-tool]");
@@ -126,7 +129,7 @@ function addIframe() {
                     tool_id = $(target).data("tool");
 
                     if (tool_id === "upload1" || tool_id === "upload") {
-                        Galaxy.upload.show();
+                        document.getElementById("tool-panel-upload-button").click();
                     } else {
                         Galaxy.router.push(`?tool_id=${tool_id}`);
                     }
