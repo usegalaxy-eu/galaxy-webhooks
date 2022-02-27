@@ -15,22 +15,28 @@ pages = [
         # 'weight': 0.0,
     # },
     {
+        'src': 'https://gallantries.github.io/posts/2021/12/14/smorgasbord2-tapas/',
+        'height': 1000,
+        'title': 'GTN Smörgåsbord 2: 14-18 March',
+        'weight': 0.8,
+    },
+    {
         'src': 'https://stats.galaxyproject.eu/d/000000004/galaxy?orgId=1&refresh=1m&viewPanel=38&from=now-3h&to=now',
         'height': 1000,
         'title': 'Galaxy Queue (past 3 hours)',
-        'weight': 0.5,
+        'weight': 0.1,
     },
     {
         'src': 'https://usegalaxy-eu.github.io/galaxy/events.html',
         'height': 1000,
         'title': 'Upcoming Events',
-        'weight': 0.5,
+        'weight': 0.2,
     },
     {
         'src': 'https://usegalaxy.eu/gapars-experiment/',
         'height': 1000,
         'title': 'Citizen Science Experiment!',
-        'weight': 0.5,
+        'weight': 0.2,
     }
 ]
 
