@@ -10,9 +10,9 @@ $(document).ready(function() {
             '<div id="cit_need-body">' +
             'If Galaxy helped with the analysis of your data, please do not forget to <b>cite</b>:' +
             '<div id="cit_need-citation">'+
-            'Afgan E et al. 2016 The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2016 update.<br>'+
-            'Nucleic Acids Res. 44, W3–W10<br>'+
-            'doi:10.1093/nar/gkw343'+
+            'The Galaxy Community 2022 - The Galaxy platform for accessible, reproducible and collaborative biomedical analyses: 2022 update<br>'+
+            'Nucleic Acids Research, gkac247<br>'+
+            'doi:10.1093/nar/gkac247'+
             '</div>' +
             'And please <b>acknowledge</b> the Freiburg Galaxy server:' +
             '<div id="cit_need-citation">'+
