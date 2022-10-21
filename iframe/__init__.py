@@ -2,7 +2,7 @@ import random
 
 pages = [
     {
-        'src': 'https://usegalaxy-eu.github.io/galaxy/news.html',
+        'src': 'https://galaxyproject.org/bare/eu/news/',
         'height': 1000,
         'title': 'Galactic News',
         'weight': 0.5,
@@ -21,7 +21,7 @@ pages = [
         'weight': 0.5,
     },
     {
-        'src': 'https://usegalaxy-eu.github.io/galaxy/events.html',
+        'src': 'https://galaxyproject.org/bare/eu/events/',
         'height': 1000,
         'title': 'Upcoming Events',
         'weight': 0.5,
