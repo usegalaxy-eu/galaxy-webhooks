@@ -7,13 +7,12 @@ pages = [
         'title': 'Galactic News',
         'weight': 0.5,
     },
-    # {
-        # # TODO: need to self-host
-        # 'src': 'http://teacheng.illinois.edu/SequenceAlignment/',
-        # 'height': 1000,
-        # 'title': 'Sequence Alignment: The Game!',
-        # 'weight': 0.0,
-    # },
+    {
+        'src': 'https://usegalaxy/webhooks-games/SequenceAlignment/',
+        'height': 1000,
+        'title': 'Sequence Alignment: The Game!',
+        'weight': 0.1,
+    },
     {
         'src': 'https://stats.galaxyproject.eu/d/000000004/galaxy?orgId=1&refresh=1m&viewPanel=38&from=now-3h&to=now',
         'height': 1000,
