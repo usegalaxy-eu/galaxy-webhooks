@@ -7,6 +7,12 @@ pages = [
         'title': 'Galactic News',
         'weight': 0.5,
     },
+    {
+        'src': 'https://forms.gle/VyPpLzHCZbw3BK2h8',
+        'height': 1000,
+        'title': 'Microbial survay',
+        'weight': 0.5,
+    },
     # {
         # # TODO: need to self-host
         # 'src': 'http://teacheng.illinois.edu/SequenceAlignment/',
