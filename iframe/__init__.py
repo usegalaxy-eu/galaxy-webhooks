@@ -8,6 +8,12 @@ pages = [
         'weight': 0.5,
     },
     {
+        'src': 'https://docs.google.com/forms/d/e/1FAIpQLScxvybBFjgCqHPbQC8Qrallex4JampXGCVK-UoBqTNx54BfrQ/viewform',
+        'height': 1000,
+        'title': 'Usegalaxy feedback form',
+        'weight': 0.2,
+    },
+    {
         'src': 'https://forms.gle/zgpwse47fGjWZuHi8',
         'height': 1000,
         'title': 'US Galaxy Days: Are you interested?',
