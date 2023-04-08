@@ -8,6 +8,12 @@ pages = [
         'weight': 0.5,
     },
     {
+        'src': 'https://forms.gle/zgpwse47fGjWZuHi8',
+        'height': 1000,
+        'title': 'US Galaxy Days: Are you interested?',
+        'weight': 1,
+    },  
+    {
         'src': 'https://forms.gle/VyPpLzHCZbw3BK2h8',
         'height': 1000,
         'title': 'Microbial survay',
