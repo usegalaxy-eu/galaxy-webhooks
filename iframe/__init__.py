@@ -19,12 +19,6 @@ pages = [
         'title': 'US Galaxy Days: Are you interested?',
         'weight': 1,
     },  
-    {
-        'src': 'https://forms.gle/VyPpLzHCZbw3BK2h8',
-        'height': 1000,
-        'title': 'Microbial survay',
-        'weight': 0.5,
-    },
     # {
         # # TODO: need to self-host
         # 'src': 'http://teacheng.illinois.edu/SequenceAlignment/',
