@@ -37,6 +37,12 @@ pages = [
         'height': 1000,
         'title': 'Citizen Science Experiment!',
         'weight': 0.5,
+    },
+    {
+        'src': 'https://gallantries.github.io/video-library/events/smorgasbord3/webhook.html',
+        'height': 1000,
+        'title': 'Join Smörgåsbord 3!',
+        'weight': 0.5,
     }
 ]
 
