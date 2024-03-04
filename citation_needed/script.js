@@ -16,7 +16,9 @@ $(document).ready(function() {
             '</div>' +
             'And please <b>acknowledge</b> the Freiburg Galaxy server:' +
             '<div id="cit_need-citation">'+
-            'The Galaxy server that was used for some calculations is in part funded by Collaborative Research Centre 992 Medical Epigenetics (DFG grant SFB 992/1 2012) and German Federal Ministry of Education and Research (BMBF grants 031 A538A/A538C RBC, 031L0101B/031L0101C de.NBI-epi, 031L0106 de.STAIR (de.NBI)).' +
+            'The Galaxy server that was used for your calculations is in part funded by the German Federal Ministry of Education and Research '+
+            '(BMBF grants 031 A538A/A538C RBC, 031L0101B/031L0101C de.NBI-epi, 031L0106 de.STAIR (de.NBI)) and ' +
+            'the Ministry of Science, Research and the Arts Baden-Württemberg (MWK) within the framework of LIBIS/de.NBI Freiburg.'
             '</div>' +
             '</div>'
         ),
