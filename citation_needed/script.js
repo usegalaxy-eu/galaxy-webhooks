@@ -16,7 +16,10 @@ $(document).ready(function() {
             '</div>' +
             'And please <b>acknowledge</b> the European Galaxy server:' +
             '<div id="cit_need-citation">'+
-            'The Galaxy server used for some calculations is partly funded by the German Federal Ministry of Education and Research BMBF grant 031 A538A de.NBI-RBC and the Ministry of Science, Research and the Arts Baden-Württemberg (MWK) within the framework of LIBIS/de.NBI Freiburg.' +            '</div>' +
+            'The Galaxy server that was used for your calculations is in part funded by the German Federal Ministry of Education and Research '+
+            '(BMBF grants 031 A538A/A538C RBC, 031L0101B/031L0101C de.NBI-epi, 031L0106 de.STAIR (de.NBI)) and ' +
+            'the Ministry of Science, Research and the Arts Baden-Württemberg (MWK) within the framework of LIBIS/de.NBI Freiburg.'
+            '</div>' +
             '</div>'
         ),
 
