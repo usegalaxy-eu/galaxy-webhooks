@@ -2,7 +2,8 @@ id: tour_generator
 type:
   - onload
   - tool-menu
-activate: true
+# this is now upstream since 25.1 and we don't need this webhook
+activate: false
 
 icon: fa-puzzle-piece
 title: Generate Tour
