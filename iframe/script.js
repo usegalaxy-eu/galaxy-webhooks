@@ -1,33 +1,36 @@
-$(document).ready(function() {
+// Injected by the Galaxy webhook framework. Runs in the global page scope
+// wrapped in an IIFE, so it must be self-contained vanilla JS -- Backbone,
+// underscore and jQuery are no longer available as globals in the Galaxy client.
+const root = typeof Galaxy !== "undefined" && Galaxy.root ? Galaxy.root : "/";
+const container = document.getElementById("iframe");
 
-	var galaxyRoot = typeof Galaxy != 'undefined' ? Galaxy.root : '/';
+if (container) {
+    container.innerHTML = '<div id="webhook-iframe-parent"></div>';
+    const parent = document.getElementById("webhook-iframe-parent");
 
-	var IframeAppView = Backbone.View.extend({
-		el: '#iframe',
+    (async () => {
+        const url = `${root}api/webhooks/iframe/data`;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
 
-		appTemplate: _.template(
-            '<div id="webhook-iframe-parent"></div>'
-		),
+            const header = document.createElement("div");
+            header.id = "iframe-header";
+            const name = document.createElement("div");
+            name.id = "iframe-name";
+            name.textContent = data.title;
+            header.appendChild(name);
 
-		iframeTemplate: _.template(
-			'<div id="iframe-header">' +
-				'<div id="iframe-name"><%= title %></div>' +
-			'</div>' +
-			'<iframe id="webhook-iframe" src="<%= src %>" style="width:100%; height: <%= height %>px; border: none;">'
-		),
+            const frame = document.createElement("iframe");
+            frame.id = "webhook-iframe";
+            frame.src = data.src;
+            frame.style.width = "100%";
+            frame.style.height = `${data.height}px`;
+            frame.style.border = "none";
 
-		initialize: function() {
-			var self = this;
-			this.$el.html(this.appTemplate());
-			this.$iframe = this.$('#webhook-iframe-parent');
-
-			$.getJSON(galaxyRoot + 'api/webhooks/iframe/data', function(data) {
-				self.$iframe.html(self.iframeTemplate({src: data.src, height: data.height, title: data.title}));
-			});
-			return this;
-		}
-
-	});
-
-	new IframeAppView();
-});
+            parent.replaceChildren(header, frame);
+        } catch (e) {
+            console.error(`[iframe webhook] request to "${url}" failed`, e);
+        }
+    })();
+}
