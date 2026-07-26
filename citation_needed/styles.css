@@ -1,37 +1,181 @@
+/* Galaxy brand tokens (see galaxyproject/galaxy-hub astro/DESIGN.md):
+   galaxy-dark #2c3143  galaxy-primary #25537b  galaxy-gold #ffd700 */
 #citation_needed {
-    border: 1px solid #58585a;
-    text-align: left;
-    border-radius: 2px;
-    background: #E0E0E0;
+    --cit-gold: #ffd700;
+    --cit-primary: #25537b;
+    --cit-surface: #ffffff;
+    --cit-surface-alt: #f4f7fb;
+    --cit-text: #2c3143;
+    --cit-muted: #55606e;
+    --cit-border: #d8e0ea;
+
+    border: 1px solid var(--cit-border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--cit-surface);
+    color: var(--cit-text);
+    box-shadow: 0 1px 3px rgba(44, 49, 67, 0.12);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 #cit_need-header {
-    background: #B8B8B8;
-    padding: 1em 2em;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0.85em 1.25em;
+    background: linear-gradient(135deg, #2c3143 0%, #25537b 100%);
+    border-bottom: 3px solid var(--cit-gold);
+    color: #fff;
+}
+
+#cit_need-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#cit_need-title::before {
+    content: "\2726"; /* ✦ */
+    color: var(--cit-gold);
 }
 
 #cit_need-body {
-    text-align: left;
-    background: #E0E0E0;
-    padding: 1em 2em 1em 2em;
+    padding: 1.15em 1.25em;
 }
 
-#cit_need-citation {
-    background: #FFFFFF;
-    border-left: 4px solid #d1bd2a;
-    margin: 1em;
-    padding: 1em 2em;
+#cit_need-body p {
+    margin: 0 0 0.75em;
+    color: var(--cit-muted);
 }
 
-#cit_need-img {
-    background: #fff;
+.cit-need-block {
+    background: var(--cit-surface-alt);
+    border-left: 4px solid var(--cit-gold);
+    border-radius: 0 6px 6px 0;
+    margin: 0.5em 0 1em;
+    padding: 0.85em 1.1em;
 }
 
-#cit_need-img img {
-    padding: 10px;
-    max-width: 100%;
-    margin-bottom: -4px;
+.cit-need-block:last-child {
+    margin-bottom: 0;
 }
 
+.cit-need-ref-title {
+    font-weight: 700;
+    color: var(--cit-text);
+}
 
+.cit-need-ref-meta {
+    color: var(--cit-muted);
+    font-size: 0.85rem;
+    margin-top: 0.15em;
+}
+
+.cit-need-doi {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    margin-top: 0.4em;
+    color: var(--cit-primary);
+    text-decoration: none;
+    font-weight: 700;
+    word-break: break-all;
+}
+
+.cit-need-doi:hover,
+.cit-need-doi:focus {
+    text-decoration: underline;
+    text-decoration-color: var(--cit-gold);
+}
+
+.cit-need-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin: 1.25em 0 0.75em;
+    color: var(--cit-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.cit-need-divider::before,
+.cit-need-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--cit-border);
+}
+
+.cit-need-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 6px;
+    padding: 0.45em 0.75em;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+#cit_need-header .cit-need-btn:hover,
+#cit_need-header .cit-need-btn:focus {
+    background: rgba(255, 255, 255, 0.26);
+    border-color: var(--cit-gold);
+    outline: none;
+}
+
+.cit-need-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+}
+
+.cit-need-footer .cit-need-btn {
+    color: var(--cit-primary);
+    background: transparent;
+    border-color: var(--cit-border);
+}
+
+.cit-need-footer .cit-need-btn:hover,
+.cit-need-footer .cit-need-btn:focus {
+    background: var(--cit-surface-alt);
+    border-color: var(--cit-primary);
+    outline: none;
+}
+
+.cit-need-btn.cit-need-copied {
+    color: #1a7f37;
+    border-color: #1a7f37;
+    background: rgba(26, 127, 55, 0.08);
+}
+
+#cit_need-header .cit-need-btn.cit-need-copied {
+    color: #fff;
+    background: rgba(46, 160, 87, 0.55);
+    border-color: rgba(46, 160, 87, 0.9);
+}
+
+/* Adapt to Galaxy's dark theme. */
+@media (prefers-color-scheme: dark) {
+    #citation_needed {
+        --cit-surface: #1f2430;
+        --cit-surface-alt: #272d3b;
+        --cit-text: #e6e9ef;
+        --cit-muted: #a3adbd;
+        --cit-border: #3a4152;
+        --cit-primary: #7fb0e0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+}
