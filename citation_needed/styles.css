@@ -1,11 +1,14 @@
-/* Galaxy brand tokens (see galaxyproject/galaxy-hub astro/DESIGN.md):
-   galaxy-dark #2c3143  galaxy-primary #25537b  galaxy-gold #ffd700 */
+/* Colours resolve from the canonical Galaxy brand tokens
+   (@galaxyproject/brand-tokens) when they are present on :root, and fall back
+   to the literal brand hex otherwise -- webhook styles are injected verbatim
+   with no build step, so the fallbacks keep the panel correct on their own. */
 #citation_needed {
-    --cit-gold: #ffd700;
-    --cit-primary: #25537b;
+    --cit-gold: var(--color-galaxy-gold, #ffd700);
+    --cit-primary: var(--color-galaxy-primary, #25537b);
+    --cit-dark: var(--color-galaxy-dark, #2c3143);
     --cit-surface: #ffffff;
     --cit-surface-alt: #f4f7fb;
-    --cit-text: #2c3143;
+    --cit-text: var(--color-galaxy-dark, #2c3143);
     --cit-muted: #55606e;
     --cit-border: #d8e0ea;
 
@@ -25,7 +28,7 @@
     justify-content: space-between;
     gap: 1em;
     padding: 0.85em 1.25em;
-    background: linear-gradient(135deg, #2c3143 0%, #25537b 100%);
+    background: linear-gradient(135deg, var(--cit-dark) 0%, var(--cit-primary) 100%);
     border-bottom: 3px solid var(--cit-gold);
     color: #fff;
 }
