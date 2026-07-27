@@ -169,16 +169,3 @@
     background: rgba(46, 160, 87, 0.55);
     border-color: rgba(46, 160, 87, 0.9);
 }
-
-/* Adapt to Galaxy's dark theme. */
-@media (prefers-color-scheme: dark) {
-    #citation_needed {
-        --cit-surface: #1f2430;
-        --cit-surface-alt: #272d3b;
-        --cit-text: #e6e9ef;
-        --cit-muted: #a3adbd;
-        --cit-border: #3a4152;
-        --cit-primary: #7fb0e0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    }
-}
