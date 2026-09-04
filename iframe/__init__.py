@@ -32,8 +32,14 @@ pages = [
         'title': 'Upcoming Events',
         'weight': 0.5,
     },
+    #{
+    #    'src': 'https://usegalaxy.eu/gapars-experiment/',
+    #    'height': 1000,
+    #    'title': 'Citizen Science Experiment!',
+    #    'weight': 0.5,
+    #},
     {
-        'src': 'https://usegalaxy.eu/gapars-experiment/',
+        'src': 'https://galaxyproject.org/bare/eu/did-you-know/',
         'height': 1000,
         'title': 'Citizen Science Experiment!',
         'weight': 0.5,
