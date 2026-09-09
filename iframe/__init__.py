@@ -5,13 +5,13 @@ pages = [
         'src': 'https://galaxyproject.org/bare/eu/news/',
         'height': 1000,
         'title': 'Galactic News',
-        'weight': 0.5,
+        'weight': 0.2,
     },
     {
         'src': 'https://docs.google.com/forms/d/e/1FAIpQLScxvybBFjgCqHPbQC8Qrallex4JampXGCVK-UoBqTNx54BfrQ/viewform',
         'height': 1000,
         'title': 'Usegalaxy feedback form',
-        'weight': 0.2,
+        'weight': 0.1,
     },
     # {
         # # TODO: need to self-host
@@ -24,13 +24,13 @@ pages = [
         'src': 'https://stats.galaxyproject.eu/d/000000004/galaxy?orgId=1&refresh=1m&viewPanel=38&from=now-3h&to=now',
         'height': 1000,
         'title': 'Galaxy Queue (past 3 hours)',
-        'weight': 0.5,
+        'weight': 0.1,
     },
     {
         'src': 'https://galaxyproject.org/bare/eu/events/',
         'height': 1000,
         'title': 'Upcoming Events',
-        'weight': 0.5,
+        'weight': 0.2,
     },
     #{
     #    'src': 'https://usegalaxy.eu/gapars-experiment/',
@@ -42,7 +42,7 @@ pages = [
         'src': 'https://galaxyproject.org/bare/eu/did-you-know/',
         'height': 1000,
         'title': 'Did you know ???',
-        'weight': 0.5,
+        'weight': 0.8,
     }
 ]
 
