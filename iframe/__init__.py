@@ -41,7 +41,7 @@ pages = [
     {
         'src': 'https://galaxyproject.org/bare/eu/did-you-know/',
         'height': 1000,
-        'title': 'Citizen Science Experiment!',
+        'title': 'Did you know ???',
         'weight': 0.5,
     }
 ]
