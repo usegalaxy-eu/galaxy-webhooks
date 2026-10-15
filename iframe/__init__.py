@@ -8,6 +8,12 @@ pages = [
         'weight': 0.5,
     },
     {
+        'src': 'https://usegalaxy/webhooks-games/SequenceAlignment/',
+        'height': 1000,
+        'title': 'Sequence Alignment: The Game!',
+        'weight': 0.1,
+    },
+    {
         'src': 'https://docs.google.com/forms/d/e/1FAIpQLScxvybBFjgCqHPbQC8Qrallex4JampXGCVK-UoBqTNx54BfrQ/viewform',
         'height': 1000,
         'title': 'Usegalaxy feedback form',
