@@ -15,7 +15,7 @@ def get_by_id(random_id, webhook):
     random_id = random.randint(1, webhook.config['latest_id'])
     url = 'http://www.phdcomics.com/comics/archive.php?comicid=%d' % \
         random_id
-    content = urlopen(url).read()
+    content = urlopen(url).read().decode('utf-8') 
     soup = BeautifulSoup(content, 'html.parser')
     comic_img = soup.find_all('img', id='comic2')
     print(url)
@@ -40,7 +40,7 @@ def main(trans, webhook, params):
         # Get latest id
         if 'latest_id' not in webhook.config.keys():
             url = 'http://phdcomics.com/gradfeed.php'
-            content = urlopen(url).read()
+            content = urlopen(url).read().decode('utf-8') 
             soap = BeautifulSoup(content, 'html.parser')
             comics = [
                 g.contents[0]

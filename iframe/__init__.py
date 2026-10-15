@@ -2,7 +2,7 @@ import random
 
 pages = [
     {
-        'src': 'https://usegalaxy-eu.github.io/galaxy/news.html',
+        'src': 'https://galaxyproject.org/bare/eu/news/',
         'height': 1000,
         'title': 'Galactic News',
         'weight': 0.5,
@@ -13,14 +13,26 @@ pages = [
         'title': 'Sequence Alignment: The Game!',
         'weight': 0.1,
     },
+        'src': 'https://docs.google.com/forms/d/e/1FAIpQLScxvybBFjgCqHPbQC8Qrallex4JampXGCVK-UoBqTNx54BfrQ/viewform',
+        'height': 1000,
+        'title': 'Usegalaxy feedback form',
+        'weight': 0.2,
+    },
+    # {
+        # # TODO: need to self-host
+        # 'src': 'http://teacheng.illinois.edu/SequenceAlignment/',
+        # 'height': 1000,
+        # 'title': 'Sequence Alignment: The Game!',
+        # 'weight': 0.0,
+    # },
     {
-        'src': 'https://stats.galaxyproject.eu/dashboard-solo/db/galaxy?refresh=1m&orgId=1&from=now-3h&to=now&panelId=38',
+        'src': 'https://stats.galaxyproject.eu/d/000000004/galaxy?orgId=1&refresh=1m&viewPanel=38&from=now-3h&to=now',
         'height': 1000,
         'title': 'Galaxy Queue (past 3 hours)',
         'weight': 0.5,
     },
     {
-        'src': 'https://usegalaxy-eu.github.io/galaxy/events.html',
+        'src': 'https://galaxyproject.org/bare/eu/events/',
         'height': 1000,
         'title': 'Upcoming Events',
         'weight': 0.5,
