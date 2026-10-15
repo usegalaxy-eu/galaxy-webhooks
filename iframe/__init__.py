@@ -13,6 +13,7 @@ pages = [
         'title': 'Sequence Alignment: The Game!',
         'weight': 0.1,
     },
+    {
         'src': 'https://docs.google.com/forms/d/e/1FAIpQLScxvybBFjgCqHPbQC8Qrallex4JampXGCVK-UoBqTNx54BfrQ/viewform',
         'height': 1000,
         'title': 'Usegalaxy feedback form',
